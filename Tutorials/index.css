@@ -745,7 +745,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: var(--padding-16xl) 0px 0px;
+  /* padding: var(--padding-16xl) 0px 0px; */
   box-sizing: border-box;
   gap: var(--gap-13xl);
   line-height: normal;
@@ -784,6 +784,86 @@
   display: flex;
   align-items: center;
 }
+
+.navbar {
+  background-color: #4725ce;
+  padding: 10px 20px;
+  font-family: var(--font-manrope);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container a {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.profile-container img.mask-group-icon1-my {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.profile-container img.vector-icon1-my {
+  height: 7px;
+  margin-left: 5px;
+}
+
+.arrow-icon-my {
+  height: 10px;
+  margin-left: 5px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.full-s,
+.dp {
+  text-decoration: none;
+}
+
+.full-s {
+  margin-right: 30px;
+}
+
+.dp {
+  margin-right: 15px;
+}
+
 @media screen and (max-width: 1200px) {
   .rectangle-container {
     padding-left: var(--padding-16xl);
@@ -924,6 +1004,39 @@
   }
   .frame-parent {
     gap: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  .rect-active {
+    margin-top: 188px;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 47px;
+    left: -35px;
+    background-color: #4725ce;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    z-index: 3;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
   }
 }
 

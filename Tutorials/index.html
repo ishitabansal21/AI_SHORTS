@@ -10,66 +10,44 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
     />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.querySelector(".menu-button");
-        const frameParent = document.querySelector(".frame-parent");
-
-        menuButton.addEventListener("click", function () {
-          frameParent.classList.toggle("open");
-          menuButton.classList.toggle("open");
-        });
-      });
-    </script>
   </head>
   <body>
-    <div class="tutorials">
-      <div class="main">
-        <div class="full-screen-prady">
-          <button class="menu-button">☰</button>
-
-          <div class="frame-parent">
-            <div class="dashboard-wrapper">
-              <a class="dashboard">Dashboard</a>
-            </div>
-            <div class="masterclass-wrapper">
-              <a class="masterclass">Masterclass</a>
-            </div>
-            <div class="bonuses-wrapper">
-              <a class="bonuses">Bonuses</a>
-            </div>
-            <a class="tutorial">Tutorial</a>
-            <a class="agency-setting">Agency Setting</a>
-          </div>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="logo">
+          <img loading="lazy" alt="" src="./public/image-8@2x.png" />
         </div>
-        <div class="full-pic">
-          <div class="first-side">
-            <a class="full-screen">Full screen</a>
+        <!-- <div class="menu-icon" id="menu-icon">&#9776;</div> -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Masterclass</a></li>
+          <li><a href="#">Bonuses</a></li>
+          <li><a href="#">Tutorial</a></li>
+          <li><a href="#">Agency Setting</a></li>
+        </ul>
+        <div class="profile-container">
+          <a class="full-s" href="#">
+            Full screen
+            <img class="arrow-icon-my" src="./public/arrow-1.svg" alt="Arrow" />
+          </a>
+          <a class="dp" href="#">
             <img
-              class="frame-child22"
-              loading="lazy"
-              alt=""
-              src="./public/arrow-1.svg"
-            />
-          </div>
-          <div class="second-side">
-            <img
-              class="mask-group-icon1"
-              loading="lazy"
-              alt=""
+              class="mask-group-icon1-my"
               src="./public/mask-group-1@2x.png"
+              alt="Profile Picture"
             />
-
-            <a class="prady">Prady</a>
+            Prady
             <img
-              class="vector-icon6"
-              loading="lazy"
-              alt=""
+              class="vector-icon1-my"
               src="./public/vector-6.svg"
+              alt="Arrow Down"
             />
-          </div>
+          </a>
         </div>
       </div>
+    </nav>
+    <div class="tutorials">
       <main class="rectangle-parent">
         <div class="frame-child"></div>
         <div class="frame-group">
@@ -285,37 +263,16 @@
           </div>
         </section>
       </main>
-      <header class="mask-group-parent">
-        <img class="mask-group-icon" alt="" src="./public/mask-group.svg" />
-
-        <!-- <img
-          class="frame-child22"
-          loading="lazy"
-          alt=""
-          src="./public/arrow-1.svg"
-        />
-
-        <img
-          class="mask-group-icon1"
-          loading="lazy"
-          alt=""
-          src="./public/mask-group-1@2x.png"
-        /> -->
-
-        <!-- <img
-          class="vector-icon6"
-          loading="lazy"
-          alt=""
-          src="./public/vector-6.svg"
-        /> -->
-
-        <img
-          class="image-8-icon"
-          loading="lazy"
-          alt=""
-          src="./public/image-8@2x.png"
-        />
-      </header>
     </div>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+      const rectangleParent = document.getElementById("rect-parent-id");
+
+      menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        rectangleParent.classList.toggle("rect-active");
+      });
+    </script>
   </body>
 </html>
