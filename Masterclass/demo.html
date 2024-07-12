@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="demo.css" />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="./public/your-logo.png" alt="Logo" />
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Masterclass</a></li>
+          <li><a href="#">Bonuses</a></li>
+          <li><a href="#">Tutorial</a></li>
+          <li><a href="#">Agency Setting</a></li>
+        </ul>
+        <div class="profile-container">
+          <a href="#">
+            Full screen
+            <img class="arrow-icon" src="./public/arrow-1.svg" alt="Arrow" />
+          </a>
+          <a href="#">
+            <img
+              class="mask-group-icon1"
+              src="./public/mask-group-1@2x.png"
+              alt="Profile Picture"
+            />
+            Prady
+            <img
+              class="vector-icon1"
+              src="./public/vector-1.svg"
+              alt="Arrow Down"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
