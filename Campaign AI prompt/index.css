@@ -325,6 +325,7 @@
   min-width: 300px;
   max-width: 100%;
   z-index: 3;
+  padding: 0px 25px;
 }
 .rectangle-div {
   width: 295px;
@@ -367,7 +368,8 @@
   border-radius: var(--br-2xl-5);
   background-color: var(--color-ghostwhite);
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   padding: var(--padding-4xs) var(--padding-xl) var(--padding-2xs)
     var(--padding-2xl);
   box-sizing: border-box;
@@ -1342,6 +1344,11 @@
 
 .dp {
   margin-right: 15px;
+}
+.op1,
+.op2,
+.op3 {
+  background-color: var(--color-ghostwhite);
 }
 
 @media screen and (max-width: 1200px) {

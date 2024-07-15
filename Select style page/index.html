@@ -80,7 +80,7 @@
                             src="./public/24101320-il2-1@2x.png"
                           />
 
-                          <div class="high-exposure-selected">
+                          <!-- <div class="high-exposure-selected">
                             <div class="high-exposure-selected-child"></div>
                             <div class="high-exposure-checkmark">
                               <img
@@ -91,66 +91,73 @@
                               />
                             </div>
                             <div class="selected">Selected</div>
-                          </div>
+                          </div> -->
                         </div>
                         <div class="high-exposure">High exposure</div>
                       </div>
                       <div class="dreamy-option">
-                        <div class="dreamy-container">
-                          <img
-                            class="il2-4-icon"
-                            loading="lazy"
-                            alt=""
-                            src="./public/24101320-il2-4@2x.png"
-                          />
-
-                          <div class="dreamy">Dreamy</div>
+                        <div class="high-exposure-container">
+                          <div class="high-exposure-inner">
+                            <div class="high-exposure-inner-child"></div>
+                            <img
+                              class="il2-1-icon"
+                              alt=""
+                              src="./public/24101320-il2-4@2x.png"
+                            />
+                          </div>
+                          <div class="high-exposure">Dreamy</div>
                         </div>
                       </div>
                     </div>
-                    <div class="more-styles">
-                      <div class="styles-row-one">
-                        <div class="styles-row-one-pair">
+                    <div class="high-exposure-option">
+                      <div class="high-exposure-container">
+                        <div class="high-exposure-inner">
+                          <div class="high-exposure-inner-child"></div>
                           <img
-                            class="il2-2-icon"
-                            loading="lazy"
+                            class="il2-1-icon"
                             alt=""
                             src="./public/24101320-il2-2@2x.png"
                           />
-
-                          <div class="water-color">Water color</div>
                         </div>
-                        <div class="styles-row-two-pair">
+                        <div class="high-exposure">Water color</div>
+                      </div>
+                      <div class="dreamy-option">
+                        <div class="high-exposure-container">
+                          <div class="high-exposure-inner">
+                            <div class="high-exposure-inner-child"></div>
+                            <img
+                              class="il2-1-icon"
+                              alt=""
+                              src="./public/24101320-il2-5@2x.png"
+                            />
+                          </div>
+                          <div class="high-exposure">Retro</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="high-exposure-option">
+                      <div class="high-exposure-container">
+                        <div class="high-exposure-inner">
+                          <div class="high-exposure-inner-child"></div>
                           <img
-                            class="il2-3-icon"
-                            loading="lazy"
+                            class="il2-1-icon"
                             alt=""
                             src="./public/24101320-il2-3@2x.png"
                           />
-
-                          <div class="anime">Anime</div>
                         </div>
+                        <div class="high-exposure">Anime</div>
                       </div>
-                      <div class="styles-row-one1">
-                        <div class="il2-5-parent">
-                          <img
-                            class="il2-5-icon"
-                            loading="lazy"
-                            alt=""
-                            src="./public/24101320-il2-5@2x.png"
-                          />
-
-                          <div class="retro">Retro</div>
-                        </div>
-                        <div class="il2-6-parent">
-                          <img
-                            class="il2-6-icon"
-                            loading="lazy"
-                            alt=""
-                            src="./public/24101320-il2-6@2x.png"
-                          />
-
-                          <div class="psychedelic">Psychedelic</div>
+                      <div class="dreamy-option">
+                        <div class="high-exposure-container">
+                          <div class="high-exposure-inner">
+                            <div class="high-exposure-inner-child"></div>
+                            <img
+                              class="il2-1-icon"
+                              alt=""
+                              src="./public/24101320-il2-6@2x.png"
+                            />
+                          </div>
+                          <div class="high-exposure">Psychedelic</div>
                         </div>
                       </div>
                     </div>
@@ -299,6 +306,20 @@
       backSelectInner.addEventListener("click", () => {
         popupBox.classList.toggle("show");
         //document.body.classList.toggle("blur");
+      });
+
+      var divs = document.querySelectorAll(".high-exposure-inner");
+
+      // Add click event listener to each div
+      divs.forEach(function (div) {
+        div.addEventListener("click", function () {
+          divs.forEach(function (d) {
+            d.classList.remove("image-bg");
+          });
+
+          // Add 'image-bg' class to the clicked div
+          div.classList.add("image-bg");
+        });
       });
     </script>
   </body>

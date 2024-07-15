@@ -2010,6 +2010,10 @@
   padding: var(--padding-10xs-5) 0 0;
 }
 
+.dropdown-select {
+  color: var(--color-thistle);
+}
+
 @media screen and (max-width: 975px) {
   .prady-screen {
     flex-wrap: wrap;

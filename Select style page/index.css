@@ -252,9 +252,14 @@
   height: 233px;
   position: relative;
   border-radius: var(--br-3xs);
-  background-color: var(--color-mediumblue);
+
   z-index: 3;
 }
+
+.image-bg {
+  background-color: var(--color-mediumblue);
+}
+
 .high-exposure {
   width: 103px;
   position: relative;
@@ -270,6 +275,7 @@
 .high-exposure-container {
   align-self: stretch;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -646,6 +652,7 @@
 .preview-player {
   align-self: stretch;
   padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  align-self: center;
 }
 .frame-child1 {
   position: absolute;
