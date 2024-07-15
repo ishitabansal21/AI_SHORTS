@@ -29,7 +29,7 @@
             Full screen
             <img class="arrow-icon-my" src="./public/arrow-1.svg" alt="Arrow" />
           </a>
-          <a class="dp" href="#">
+          <a class="dp" id="drop-id" href="#">
             <img
               class="mask-group-icon1-my"
               src="./public/mask-group-3@2x.png"
@@ -45,6 +45,30 @@
         </div>
       </div>
     </nav>
+    <!-- popup for logout -->
+    <div class="profile-options-log" id="profile-drop">
+      <div class="user-profile-log">
+        <a class="profile-log">Profile</a>
+        <a class="log-out-log">Log Out</a>
+        <div class="union-parent-log">
+          <img class="union-icon-log" alt="" src="./public/union.svg" />
+
+          <img
+            class="frame-child-log"
+            loading="lazy"
+            alt=""
+            src="./public/group-1171275906.svg"
+          />
+
+          <img
+            class="community-icon-log"
+            loading="lazy"
+            alt=""
+            src="./public/vector.svg"
+          />
+        </div>
+      </div>
+    </div>
     <div class="select-style-page">
       <main class="rectangle-parent">
         <div class="frame-child"></div>
@@ -61,7 +85,7 @@
                     class="vector-icon"
                     loading="lazy"
                     alt=""
-                    src="./public/vector.svg"
+                    src="./public/vector-11.svg"
                   />
                 </div>
                 <button class="back">Back</button>
@@ -298,6 +322,8 @@
       const navMenu = document.getElementById("nav-menu");
       const backSelectInner = document.getElementById("back-select-inner");
       const popupBox = document.getElementById("popup-box");
+      const dropId = document.getElementById("drop-id");
+      const profileDrop = document.getElementById("profile-drop");
 
       menuIcon.addEventListener("click", () => {
         navMenu.classList.toggle("active");
@@ -306,6 +332,10 @@
       backSelectInner.addEventListener("click", () => {
         popupBox.classList.toggle("show");
         //document.body.classList.toggle("blur");
+      });
+
+      dropId.addEventListener("click", () => {
+        profileDrop.classList.toggle("show-nav-drop");
       });
 
       var divs = document.querySelectorAll(".high-exposure-inner");

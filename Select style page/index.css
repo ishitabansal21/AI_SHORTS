@@ -1278,6 +1278,96 @@
   position: relative;
   z-index: 1;
 }
+
+/* logout */
+.profile-options-log {
+  font-family: var(--font-manrope);
+  color: #ded5ff;
+  font-size: var(--font-size-mini);
+}
+
+.log-out-log,
+.profile-log {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: -0.03em;
+  color: inherit;
+  display: inline-block;
+  min-width: 43px;
+  z-index: 3;
+}
+.log-out-log {
+  min-width: 52px;
+}
+.union-icon-log {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-11xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 2;
+}
+.community-icon-log,
+.frame-child-log {
+  position: absolute;
+  top: 70px;
+  left: 24px;
+  width: 10.4px;
+  height: 10.9px;
+  z-index: 3;
+}
+.community-icon-log {
+  top: 33px;
+  left: 22px;
+  width: 12px;
+  height: 14px;
+}
+.union-parent-log {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.profile-options-log,
+.user-profile-log {
+  display: flex;
+  align-items: flex-start;
+}
+.profile-options-log {
+  display: none;
+}
+.show-nav-drop {
+  display: flex;
+}
+
+.user-profile-log {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-11xl) var(--padding-xl) var(--padding-13xl) 43px;
+  position: relative;
+  gap: 13px;
+}
+.profile-options-log {
+  position: absolute;
+  top: 61px;
+  right: 0px;
+  width: 299px;
+  /* flex-direction: row; */
+  /* justify-content: flex-end; */
+  padding: 0 61px;
+  box-sizing: border-box;
+}
 @media screen and (max-width: 1125px) {
   .frame-group {
     flex: 1;
